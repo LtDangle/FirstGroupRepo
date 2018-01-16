@@ -14,6 +14,7 @@
 		81B00EF7200E9DB100EC3009 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B00EF5200E9DB100EC3009 /* LaunchScreen.storyboard */; };
 		81B00F02200E9DB100EC3009 /* Unit5FirstGroupProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B00F01200E9DB100EC3009 /* Unit5FirstGroupProjectTests.swift */; };
 		81B00F0D200E9DB100EC3009 /* Unit5FirstGroupProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B00F0C200E9DB100EC3009 /* Unit5FirstGroupProjectUITests.swift */; };
+		81B00F1B200EA20000EC3009 /* test in Resources */ = {isa = PBXBuildFile; fileRef = 81B00F1A200EA20000EC3009 /* test */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		81B00F08200E9DB100EC3009 /* Unit5FirstGroupProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Unit5FirstGroupProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B00F0C200E9DB100EC3009 /* Unit5FirstGroupProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit5FirstGroupProjectUITests.swift; sourceTree = "<group>"; };
 		81B00F0E200E9DB100EC3009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81B00F1A200EA20000EC3009 /* test */ = {isa = PBXFileReference; lastKnownFileType = text; path = test; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		81B00EE0200E9DB100EC3009 = {
 			isa = PBXGroup;
 			children = (
+				81B00F1A200EA20000EC3009 /* test */,
 				81B00EEB200E9DB100EC3009 /* Unit5FirstGroupProject */,
 				81B00F00200E9DB100EC3009 /* Unit5FirstGroupProjectTests */,
 				81B00F0B200E9DB100EC3009 /* Unit5FirstGroupProjectUITests */,
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81B00F1B200EA20000EC3009 /* test in Resources */,
 				81B00EF7200E9DB100EC3009 /* LaunchScreen.storyboard in Resources */,
 				81B00EF4200E9DB100EC3009 /* Assets.xcassets in Resources */,
 				81B00EF2200E9DB100EC3009 /* Main.storyboard in Resources */,
