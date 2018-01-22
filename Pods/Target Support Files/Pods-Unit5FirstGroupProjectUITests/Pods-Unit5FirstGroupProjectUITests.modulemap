@@ -1,0 +1,6 @@
+framework module Pods_Unit5FirstGroupProjectUITests {
+  umbrella header "Pods-Unit5FirstGroupProjectUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
