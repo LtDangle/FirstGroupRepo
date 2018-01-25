@@ -16,7 +16,7 @@ class CollectionsView: UIView {
         layout.scrollDirection = .vertical
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.register(CollectionCell.self, forCellWithReuseIdentifier: "CollectionCell")
-        cv.backgroundColor = .orange
+        cv.backgroundColor = .white
         return cv
     }()
     

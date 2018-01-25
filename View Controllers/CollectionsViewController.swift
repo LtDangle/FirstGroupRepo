@@ -15,6 +15,7 @@ class CollectionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Collections"
         view.addSubview(customView)
         customView.collectionView.delegate = self
         customView.collectionView.dataSource = self
