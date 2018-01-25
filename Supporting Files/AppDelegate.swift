@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // TODO:- customize tabbar buttons
         let mapVC = MapViewController()
         mapVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+        mapVC.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "menu"), style: .plain, target: nil, action: nil)
         let collectionsVC = CollectionsViewController()
         collectionsVC.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 1)
         
