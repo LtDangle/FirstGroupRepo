@@ -17,7 +17,6 @@
 
 
 ## Gifs
-|:-------------:|:------------:|
 |<img src="http://is2.mzstatic.com/image/thumb/Purple128/v4/72/5c/be/725cbe3d-2f3c-3215-202b-2e39a318207a/source/392x696bb.jpg" width="358" height="626">|
 
 ## API Endpoints
@@ -40,8 +39,8 @@ GET https://api.foursquare.com/v2/venues/VENUE_ID/photos
 
 |Role|Responsibilities|
 |:-------------:|:------------:|
-| Technical Lead == Kash | was in charge of maintaining the health of master branch and ensuring that master is always safe to pull from. |
-| Project Manager == Izza | was responsible for the health of the Trello. Organized daily standups |
-| UI/UX == Gloria | was responsible for the design and flow of the app |
-| QA == Diego | was responsible for identifying bugs on master and that the final product is bug free|
+| Kash the Technical Lead | was in charge of maintaining the health of master branch and ensuring that master is always safe to pull from. |
+| Izza the Project Manager | was responsible for the health of the Trello. Organized daily standups |
+| Gloria the UI/UX | was responsible for the design and flow of the app |
+| Diego the QA | was responsible for identifying bugs on master and that the final product is bug free|
 
