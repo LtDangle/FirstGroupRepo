@@ -12,7 +12,7 @@ class CollectionCell: UICollectionViewCell {
     
     lazy var imageView: UIImageView = {
         let iv = UIImageView()
-        iv.image = #imageLiteral(resourceName: "monkey")
+        iv.image = #imageLiteral(resourceName: "placeholder-image")
         iv.contentMode = .scaleAspectFill
         iv.backgroundColor = .red
         iv.clipsToBounds = true
@@ -23,7 +23,7 @@ class CollectionCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "Placeholder"
         label.textAlignment = .center
-        label.backgroundColor = .brown
+        label.backgroundColor = .white
         return label
     }()
     
