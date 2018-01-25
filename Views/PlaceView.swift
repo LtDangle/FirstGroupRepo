@@ -89,7 +89,11 @@ extension PlaceView {
     private func setupLocationSB() {
         addSubview(locationSearchBar)
         locationSearchBar.snp.makeConstraints { (make) in
-            make.edges.equalTo(safeAreaLayoutGuide.snp.edges)
+//            make.edges.equalTo(safeAreaLayoutGuide.snp.edges)
+            make.top.equalTo(safeAreaLayoutGuide.snp.top)
+            make.leading.equalTo(snp.leading)
+            make.trailing.equalTo(snp.trailing)
+            make.height.equalTo(CGFloat(integerLiteral: 40))
         }
 //        locationSearchBar.translatesAutoresizingMaskIntoConstraints = false
 //        [locationSearchBar.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
@@ -113,8 +117,8 @@ extension PlaceView {
         
         let padding: CGFloat = 20
         userTrackingButton.snp.makeConstraints { (make) in
-            make.bottom.equalTo(mapView.snp.bottom).offset(padding)
-            make.trailing.equalTo(mapView.snp.trailing).offset(padding)
+            make.top.equalTo(mapView.snp.top).offset(padding)
+            make.trailing.equalTo(mapView.snp.trailing).offset(-padding)
         }
     }
     

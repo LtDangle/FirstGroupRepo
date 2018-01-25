@@ -10,22 +10,35 @@ import UIKit
 
 class CollectionsViewController: UIViewController {
     
+    let collectionsTableView = CollectionsTableView()
     
-    let customView = CollectionsView()
+    let addCollection = AddCollectionViewController()
+    
+    let numberOfVisibleCellsPerRow: CGFloat = 2.5
+    let cellSpacing: CGFloat = 10
+    
+    var numberOfSpacesPerVisibleRow: CGFloat {
+        return CGFloat(Int(numberOfVisibleCellsPerRow) + 1)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Collections"
-        view.addSubview(customView)
-        customView.collectionView.delegate = self
-        customView.collectionView.dataSource = self
-        
-        customView.translatesAutoresizingMaskIntoConstraints = false
-        [customView.topAnchor.constraint(equalTo: view.topAnchor),
-         customView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-         customView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-         customView.trailingAnchor.constraint(equalTo: view.trailingAnchor)].forEach{$0.isActive = true}
+        view.addSubview(collectionsTableView)
+        configureNavBar()
+        collectionsTableView.tableView.delegate = self
+        collectionsTableView.tableView.dataSource = self
     }
+    
+    func configureNavBar() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "add"), style: .plain, target: self, action: #selector(addNewCollection))
+        
+    }
+    
+    @objc func addNewCollection() {
+        
+    }
+    
     
 }
 
@@ -33,22 +46,20 @@ extension CollectionsViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let numOfCells: CGFloat = 2
-        let cellSpacing: CGFloat = 20
-        let numSpaces: CGFloat = 3
+        let width = (view.bounds.width - (numberOfSpacesPerVisibleRow * cellSpacing)) / numberOfVisibleCellsPerRow
         
-        let width = (view.bounds.width - (numSpaces * cellSpacing)) / numOfCells
+        let height = width + CollectionCell.venueLabelHeight
         
-        return CGSize(width: width, height: width * 1.2)
+        return CGSize(width: width, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        return UIEdgeInsets(top: cellSpacing, left: cellSpacing, bottom: cellSpacing, right: cellSpacing)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 40
-    }
+    //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    //        return 15
+    //    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
@@ -64,8 +75,28 @@ extension CollectionsViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! CollectionCell
-        
-        
         return cell
     }
+}
+
+extension CollectionsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 30
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NetflixCell", for: indexPath) as! NetflixTableViewCell
+        cell.collectionView.dataSource = self
+        cell.collectionView.delegate = self
+        return cell
+    }
+    
+}
+
+extension CollectionsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return ((view.bounds.width - (numberOfSpacesPerVisibleRow * cellSpacing)) / numberOfVisibleCellsPerRow) + CollectionCell.venueLabelHeight + NetflixTableViewCell.titleLabelHeight + (cellSpacing * 3)
+    }
+    
 }

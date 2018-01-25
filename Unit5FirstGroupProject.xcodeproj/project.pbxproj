@@ -30,6 +30,13 @@
 		81899B9020169B41008AEA82 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81899B8F20169B41008AEA82 /* CollectionCell.swift */; };
 		81899B9220169B6E008AEA82 /* CollectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81899B9120169B6E008AEA82 /* CollectionsView.swift */; };
 		819E66CA201A79D300FF2DF4 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E66C9201A79D300FF2DF4 /* ResultsTableViewController.swift */; };
+		819E66CC201A89F400FF2DF4 /* VenuesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E66CB201A89F400FF2DF4 /* VenuesAPI.swift */; };
+		819E66CE201A8A1300FF2DF4 /* PhotosAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E66CD201A8A1300FF2DF4 /* PhotosAPI.swift */; };
+		819E66D0201A8A4300FF2DF4 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E66CF201A8A4300FF2DF4 /* APIKeys.swift */; };
+		819E66D2201A8FBE00FF2DF4 /* CollectionsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E66D1201A8FBE00FF2DF4 /* CollectionsTableView.swift */; };
+		819E66D4201A915B00FF2DF4 /* NetflixTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E66D3201A915B00FF2DF4 /* NetflixTableViewCell.swift */; };
+		819E66D6201A926600FF2DF4 /* AddCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E66D5201A926600FF2DF4 /* AddCollectionViewController.swift */; };
+		819E66D8201A928C00FF2DF4 /* ManageVenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E66D7201A928C00FF2DF4 /* ManageVenueViewController.swift */; };
 		81B00EED200E9DB100EC3009 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B00EEC200E9DB100EC3009 /* AppDelegate.swift */; };
 		81B00EF2200E9DB100EC3009 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B00EF0200E9DB100EC3009 /* Main.storyboard */; };
 		81B00EF4200E9DB100EC3009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81B00EF3200E9DB100EC3009 /* Assets.xcassets */; };
@@ -87,6 +94,13 @@
 		81899B9120169B6E008AEA82 /* CollectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsView.swift; sourceTree = "<group>"; };
 		819E66C8201A773B00FF2DF4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "/Users/C4Q/Documents/Group Work/Unit5FirstGroupProject/README.md"; sourceTree = "<absolute>"; };
 		819E66C9201A79D300FF2DF4 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
+		819E66CB201A89F400FF2DF4 /* VenuesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesAPI.swift; sourceTree = "<group>"; };
+		819E66CD201A8A1300FF2DF4 /* PhotosAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAPI.swift; sourceTree = "<group>"; };
+		819E66CF201A8A4300FF2DF4 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		819E66D1201A8FBE00FF2DF4 /* CollectionsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsTableView.swift; sourceTree = "<group>"; };
+		819E66D3201A915B00FF2DF4 /* NetflixTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixTableViewCell.swift; sourceTree = "<group>"; };
+		819E66D5201A926600FF2DF4 /* AddCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCollectionViewController.swift; sourceTree = "<group>"; };
+		819E66D7201A928C00FF2DF4 /* ManageVenueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageVenueViewController.swift; sourceTree = "<group>"; };
 		81B00EE9200E9DB100EC3009 /* Unit5FirstGroupProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unit5FirstGroupProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B00EEC200E9DB100EC3009 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81B00EF1200E9DB100EC3009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -153,6 +167,9 @@
 				8139561F2017C03B0066762A /* LocationService.swift */,
 				813956212017D3B40066762A /* PermanentStorage.swift */,
 				813956252017E0DD0066762A /* TempStorage.swift */,
+				819E66CB201A89F400FF2DF4 /* VenuesAPI.swift */,
+				819E66CD201A8A1300FF2DF4 /* PhotosAPI.swift */,
+				819E66CF201A8A4300FF2DF4 /* APIKeys.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -163,6 +180,8 @@
 				81899B88201651CC008AEA82 /* CollectionsViewController.swift */,
 				81899B862016512B008AEA82 /* MapViewController.swift */,
 				819E66C9201A79D300FF2DF4 /* ResultsTableViewController.swift */,
+				819E66D5201A926600FF2DF4 /* AddCollectionViewController.swift */,
+				819E66D7201A928C00FF2DF4 /* ManageVenueViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -180,6 +199,8 @@
 				8139562D201929110066762A /* RestaurantCollectionView.swift */,
 				8139562F201929330066762A /* ResultsView.swift */,
 				813956312019295D0066762A /* ResultsDetailView.swift */,
+				819E66D1201A8FBE00FF2DF4 /* CollectionsTableView.swift */,
+				819E66D3201A915B00FF2DF4 /* NetflixTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -567,10 +588,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				81899B89201651CC008AEA82 /* CollectionsViewController.swift in Sources */,
+				819E66D0201A8A4300FF2DF4 /* APIKeys.swift in Sources */,
+				819E66CE201A8A1300FF2DF4 /* PhotosAPI.swift in Sources */,
 				81899B872016512B008AEA82 /* MapViewController.swift in Sources */,
 				813956202017C03B0066762A /* LocationService.swift in Sources */,
 				813956262017E0DD0066762A /* TempStorage.swift in Sources */,
 				819E66CA201A79D300FF2DF4 /* ResultsTableViewController.swift in Sources */,
+				819E66D4201A915B00FF2DF4 /* NetflixTableViewCell.swift in Sources */,
+				819E66D2201A8FBE00FF2DF4 /* CollectionsTableView.swift in Sources */,
 				81899B9220169B6E008AEA82 /* CollectionsView.swift in Sources */,
 				8139561E2017BFBE0066762A /* PlaceView.swift in Sources */,
 				8139563420192AA70066762A /* ResultsTableViewCell.swift in Sources */,
@@ -579,12 +604,15 @@
 				813956322019295D0066762A /* ResultsDetailView.swift in Sources */,
 				8139563820193CDF0066762A /* FourSquareImageModel.swift in Sources */,
 				813956222017D3B40066762A /* PermanentStorage.swift in Sources */,
+				819E66CC201A89F400FF2DF4 /* VenuesAPI.swift in Sources */,
 				8139562E201929110066762A /* RestaurantCollectionView.swift in Sources */,
 				8139561A2017BD6C0066762A /* ImageAPIClient.swift in Sources */,
 				8139562C201928CB0066762A /* AddCollectionView.swift in Sources */,
 				8139563620193CB70066762A /* FourSquareModel.swift in Sources */,
 				81B00EED200E9DB100EC3009 /* AppDelegate.swift in Sources */,
+				819E66D8201A928C00FF2DF4 /* ManageVenueViewController.swift in Sources */,
 				813956182017BD460066762A /* NetworkHelper.swift in Sources */,
+				819E66D6201A926600FF2DF4 /* AddCollectionViewController.swift in Sources */,
 				8139562A201927FF0066762A /* RestaurantTableViewCell.swift in Sources */,
 				81395630201929330066762A /* ResultsView.swift in Sources */,
 				81899B9020169B41008AEA82 /* CollectionCell.swift in Sources */,
