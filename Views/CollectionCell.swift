@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class CollectionCell: UICollectionViewCell {
     
@@ -53,17 +54,16 @@ class CollectionCell: UICollectionViewCell {
     
     private func setupImageView() {
         addSubview(imageView)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        [imageView.topAnchor.constraint(equalTo: topAnchor),
-         imageView.bottomAnchor.constraint(equalTo: bottomAnchor),
-         imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-         imageView.trailingAnchor.constraint(equalTo: trailingAnchor)].forEach{$0.isActive = true}
+        imageView.snp.makeConstraints { (make) in
+            make.edges.equalTo(safeAreaLayoutGuide.snp.edges)
+        }
     }
     
     private func setupVenueLabel() {
         addSubview(venueLabel)
-        venueLabel.translatesAutoresizingMaskIntoConstraints = false
-        [venueLabel.centerXAnchor.constraint(equalTo: imageView.centerXAnchor),
-         venueLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor)].forEach{$0.isActive = true}
+        venueLabel.snp.makeConstraints { (make) in
+            make.centerX.equalTo(imageView.snp.centerX)
+            make.top.equalTo(imageView.snp.bottom)
+        }
     }
 }
