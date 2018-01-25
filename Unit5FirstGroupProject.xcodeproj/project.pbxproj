@@ -84,7 +84,7 @@
 		81899B88201651CC008AEA82 /* CollectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsViewController.swift; sourceTree = "<group>"; };
 		81899B8F20169B41008AEA82 /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		81899B9120169B6E008AEA82 /* CollectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsView.swift; sourceTree = "<group>"; };
-		81956610201A5B9800A1DFBC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "/Users/c4q/Desktop/Group Projects /FirstGroupRepo/README.md"; sourceTree = "<absolute>"; };
+		819E66C8201A773B00FF2DF4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "/Users/C4Q/Documents/Group Work/Unit5FirstGroupProject/README.md"; sourceTree = "<absolute>"; };
 		81B00EE9200E9DB100EC3009 /* Unit5FirstGroupProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unit5FirstGroupProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B00EEC200E9DB100EC3009 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81B00EF1200E9DB100EC3009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -202,7 +202,7 @@
 		81B00EE0200E9DB100EC3009 = {
 			isa = PBXGroup;
 			children = (
-				81956610201A5B9800A1DFBC /* README.md */,
+				819E66C8201A773B00FF2DF4 /* README.md */,
 				81899B8D20165D32008AEA82 /* Supporting Files */,
 				81899B8E2016890B008AEA82 /* Models */,
 				81899B8C20165D29008AEA82 /* Views */,
