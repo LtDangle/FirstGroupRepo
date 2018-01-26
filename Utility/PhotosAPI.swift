@@ -26,8 +26,11 @@ struct PhotosAPI {
         dateFormatter.dateFormat = "yyyymmdd"
         let dateFormatted = dateFormatter.string(from: currentDate)
         
-        var params: [String:Any] = ["limit": 1,  "client_id": APIKeys.clientId,
-                                    "client_secret": APIKeys.clientSecret, "v": dateFormatted, "group": "venue" ]
+        var params: [String:Any] = ["limit": 1,
+                                    "client_id": APIKeys.clientId,
+                                    "client_secret": APIKeys.clientSecret,
+                                    "v": dateFormatted,
+                                    "group": "venue" ]
         
         //Results of this function get the photosItem which will be used the create the url to the venue photo
         let photoURL = "https://api.foursquare.com/v2/venues/\(venue)/photos?"

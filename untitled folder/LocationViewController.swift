@@ -10,11 +10,13 @@ import UIKit
 import MapKit
 
 
-class MapViewController: UIViewController {
+class LocationViewController: UIViewController {
     
-    let placeView = PlaceView()
+    let placeView = LocationView()
     let cellSpacing: CGFloat = 20
     
+    private var venueAPIService = VenueAPI()
+    var venues = [Venue]()
     
     private var places = [Place]() {
         didSet {
@@ -47,6 +49,9 @@ class MapViewController: UIViewController {
         configureNavBar()
         
         let _ = LocationService.manager.checkForLocationServices()
+        
+        venueAPIService.delegate = self
+        
     }
     
     private func configureNavBar() {
@@ -56,7 +61,7 @@ class MapViewController: UIViewController {
     
 }
 
-extension MapViewController: UISearchBarDelegate {
+extension LocationViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         guard let text = placeView.venueSearchBar.text else {
@@ -73,10 +78,28 @@ extension MapViewController: UISearchBarDelegate {
             print("spaces not allowed")
             return
         }
+        
+        var nearFlag: Bool
+        var lonlat: String
+        if let hasLocation = placeView.locationSearchBar.text?.isEmpty, hasLocation {
+            nearFlag = true
+        } else if LocationService.manager.checkForLocationServices() == .authorizedAlways || LocationService.manager.checkForLocationServices() == .authorizedWhenInUse {
+            nearFlag = false
+            LocationService.manager
+        } else {
+            true
+        }
+        
+        var nearText = placeView.locationSearchBar.text ?? placeView.locationSearchBar.placeholder ?? "New York, NY".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        
+        
+        
+//        VenueAPI.manager.getVenueData(searchedItem: encodedVenueSearch, locParam: <#T##String#>, location: <#T##CLLocationCoordinate2D?#>, useNearParam: <#T##Bool#>)
+        
     }
 }
 
-extension MapViewController: UICollectionViewDelegateFlowLayout {
+extension LocationViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let numOfCells: CGFloat = 3.25
         let numOfSpaces: CGFloat = 4
@@ -99,14 +122,14 @@ extension MapViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension MapViewController: UICollectionViewDataSource {
+extension LocationViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 20
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! CollectionCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! BasicCell
         
         cell.venueLabel.text = ""
         
@@ -114,3 +137,8 @@ extension MapViewController: UICollectionViewDataSource {
     }
 }
 
+extension LocationViewController: VenueAPIDelegate {
+    func getVenues(with places: [Venue]) {
+        self.venues = places
+    }
+}

@@ -18,10 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // TODO:- customize tabbar buttons
-        let mapVC = MapViewController()
+        let mapVC = LocationViewController()
         mapVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
         mapVC.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "menu"), style: .plain, target: nil, action: nil)
-        let collectionsVC = CollectionsViewController()
+        let collectionsVC = SavesViewController()
         collectionsVC.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 1)
         
         let navVC1 = UINavigationController(rootViewController: mapVC)

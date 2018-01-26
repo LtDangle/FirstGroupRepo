@@ -12,7 +12,7 @@ import UIKit
 //TO-DO:
 //When implemented, add container view
 
-class RestaurantDetailView: UIView {
+class DetailView: UIView {
     lazy var restaurantNameLabel: UILabel = {
         //Add shadow?
         let label = UILabel()

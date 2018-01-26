@@ -15,12 +15,13 @@ protocol VenueAPIDelegate: class {
 }
 
 struct VenueAPI {
+    
     var delegate : VenueAPIDelegate?
     
     let venueURL = "https://api.foursquare.com/v2/venues/search?"
     
     
-    func getVenueData(searchedItem: String, venue: [Venue], city: String?, location: CLLocationCoordinate2D?) -> Void {
+    func getVenueData(searchedItem: String, locParam: String, location: CLLocationCoordinate2D?, useNearParam nearFlag: Bool) -> Void {
         
         //To format date for version parameter
         let currentDate = Date()
@@ -34,12 +35,14 @@ struct VenueAPI {
             "client_secret": APIKeys.clientSecret,
             "query": "coffee",
             "limit": "10",
-            "v": dateFormatted,
-            "near": "New York, NY"]
+            "v": dateFormatted]
         
         parameters["query"] = searchedItem
-        parameters["near"] = city
-        
+        if nearFlag {
+            parameters["near"] = locParam
+        } else {
+            parameters["ll"] = locParam
+        }
         
         
         Alamofire.request(venueURL, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseData { (dataResponse) in
@@ -58,6 +61,7 @@ struct VenueAPI {
                 }
             }
         }
-        
     }
 }
+
+
