@@ -8,7 +8,10 @@
 
 import UIKit
 
-class ManageVenueViewController: UIViewController {
+class AddVenueToCollectionViewController: UIViewController {
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

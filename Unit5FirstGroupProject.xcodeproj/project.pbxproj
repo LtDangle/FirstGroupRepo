@@ -12,7 +12,7 @@
 		810C7C72201B8790001EB825 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C7C71201B8790001EB825 /* ResultsTableViewController.swift */; };
 		810C7C74201B8796001EB825 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C7C73201B8796001EB825 /* DetailViewController.swift */; };
 		810C7C76201B8799001EB825 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C7C75201B8799001EB825 /* LocationViewController.swift */; };
-		810C7C78201B87E3001EB825 /* ManageVenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C7C77201B87E3001EB825 /* ManageVenueViewController.swift */; };
+		810C7C78201B87E3001EB825 /* AddVenueToCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C7C77201B87E3001EB825 /* AddVenueToCollectionViewController.swift */; };
 		810C7C7A201B87FC001EB825 /* SavesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C7C79201B87FC001EB825 /* SavesViewController.swift */; };
 		813956182017BD460066762A /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813956172017BD460066762A /* NetworkHelper.swift */; };
 		8139561A2017BD6C0066762A /* ImageAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813956192017BD6C0066762A /* ImageAPIClient.swift */; };
@@ -78,7 +78,7 @@
 		810C7C71201B8790001EB825 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		810C7C73201B8796001EB825 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		810C7C75201B8799001EB825 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
-		810C7C77201B87E3001EB825 /* ManageVenueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageVenueViewController.swift; sourceTree = "<group>"; };
+		810C7C77201B87E3001EB825 /* AddVenueToCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVenueToCollectionViewController.swift; sourceTree = "<group>"; };
 		810C7C79201B87FC001EB825 /* SavesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavesViewController.swift; sourceTree = "<group>"; };
 		813956172017BD460066762A /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		813956192017BD6C0066762A /* ImageAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAPIClient.swift; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 				810C7C75201B8799001EB825 /* LocationViewController.swift */,
 				810C7C71201B8790001EB825 /* ResultsTableViewController.swift */,
 				810C7C73201B8796001EB825 /* DetailViewController.swift */,
-				810C7C77201B87E3001EB825 /* ManageVenueViewController.swift */,
+				810C7C77201B87E3001EB825 /* AddVenueToCollectionViewController.swift */,
 				810C7C79201B87FC001EB825 /* SavesViewController.swift */,
 			);
 			name = ViewControllers;
@@ -201,7 +201,6 @@
 				8139562B201928CB0066762A /* AddCollectionView.swift */,
 				8139562D201929110066762A /* RestaurantCollectionView.swift */,
 				819E66D1201A8FBE00FF2DF4 /* CollectionsTableView.swift */,
-				819E66D9201ABDF100FF2DF4 /* AddVenueToCollectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -230,6 +229,7 @@
 				81A3DF27201B8B0200580D4F /* LocationView.swift */,
 				81A3DF29201B8B0600580D4F /* ResultsView.swift */,
 				81A3DF25201B8AFF00580D4F /* DetailView.swift */,
+				819E66D9201ABDF100FF2DF4 /* AddVenueToCollectionView.swift */,
 			);
 			name = VCViews;
 			path = "New Group";
@@ -626,7 +626,7 @@
 				81899B9220169B6E008AEA82 /* CollectionsView.swift in Sources */,
 				81A3DF30201B8C1400580D4F /* InfoScrollView.swift in Sources */,
 				8139561C2017BF7F0066762A /* Place.swift in Sources */,
-				810C7C78201B87E3001EB825 /* ManageVenueViewController.swift in Sources */,
+				810C7C78201B87E3001EB825 /* AddVenueToCollectionViewController.swift in Sources */,
 				81395628201927CE0066762A /* RestaurantCollectionCVCell.swift in Sources */,
 				81A3DF2A201B8B0600580D4F /* ResultsView.swift in Sources */,
 				81A3DF31201B8C1400580D4F /* NetflixTableViewCell.swift in Sources */,
