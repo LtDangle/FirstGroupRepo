@@ -1,5 +1,5 @@
 #  Hangry
-If you get angry while you're hungry, you need this app in your phone.
+If you get angry while you're hungry, you need this app in your phone. You can search for Restaurants near your location,add your favorite restaurants to your collection and leave a tip for others. 
 
 ## Overview
 - This app uses MapKit and CoreLocation to build out a Foursquare like app with the following spcecifications:
@@ -25,13 +25,13 @@ If you get angry while you're hungry, you need this app in your phone.
 **Venue Search Endpoint:**
 Request:
 ```
-GET https://api.foursquare.com/v2/venues/search
+https://api.foursquare.com/v2/venues/search
 ```
 
 **Venue Photos Endpoint:**
 Request:
 ```
-GET https://api.foursquare.com/v2/venues/VENUE_ID/photos
+https://api.foursquare.com/v2/venues/VENUE_ID/photos
 ```
 
 
