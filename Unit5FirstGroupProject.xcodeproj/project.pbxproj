@@ -243,8 +243,7 @@
 				81A3DF2D201B8C1400580D4F /* NetflixTableViewCell.swift */,
 				81A3DF2F201B8C1400580D4F /* ResultsTableViewCell.swift */,
 			);
-			name = SupportViews;
-			path = SupportFiles;
+			path = SupportViews;
 			sourceTree = "<group>";
 		};
 		81B00EE0200E9DB100EC3009 = {

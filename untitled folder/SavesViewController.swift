@@ -41,7 +41,29 @@ class SavesViewController: UIViewController {
     }
     
     @objc func addNewCollection() {
+        let alertController = UIAlertController(title: "Create New Collection", message: "Enter name of new collection", preferredStyle: .alert)
         
+        let saveAction = UIAlertAction(title: "Save", style: .default) { (_) in
+            if let textField = alertController.textFields![0] as? UITextField {
+                // store your data
+               
+            } else {
+                // user did not fill field
+            }
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive) { (_) in }
+        
+        alertController.addTextField { (textField) in
+            textField.placeholder = "New collection name here"
+            textField.textAlignment = .center
+            
+        }
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
     
