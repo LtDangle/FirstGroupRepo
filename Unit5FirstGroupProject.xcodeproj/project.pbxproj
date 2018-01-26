@@ -243,8 +243,7 @@
 				81A3DF2D201B8C1400580D4F /* NetflixTableViewCell.swift */,
 				81A3DF2F201B8C1400580D4F /* ResultsTableViewCell.swift */,
 			);
-			name = SupportViews;
-			path = SupportFiles;
+			path = SupportViews;
 			sourceTree = "<group>";
 		};
 		81B00EE0200E9DB100EC3009 = {
@@ -466,11 +465,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Unit5FirstGroupProject/Pods-Unit5FirstGroupProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -813,6 +814,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Unit5FirstGroupProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DiegoBaca.Unit5FirstGroupProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -828,6 +830,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Unit5FirstGroupProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DiegoBaca.Unit5FirstGroupProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";

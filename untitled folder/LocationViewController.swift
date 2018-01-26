@@ -8,7 +8,7 @@
 
 import UIKit
 import MapKit
-
+import RevealingSplashView
 
 class LocationViewController: UIViewController {
     
@@ -36,27 +36,50 @@ class LocationViewController: UIViewController {
     }
     private var annotations = [MKAnnotation]()
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         view.addSubview(placeView)
-        
+        placeView.mapView.delegate = self
         placeView.venueSearchBar.delegate = self
         placeView.locationSearchBar.delegate = self
         placeView.collectionView.delegate = self
         placeView.collectionView.dataSource = self
-        
+         self.view.backgroundColor = UIColor(red: 38/255, green: 194/255, blue: 129/255, alpha: 1.0)
         
         configureNavBar()
         
         let _ = LocationService.manager.checkForLocationServices()
         
+        
         venueAPIService.delegate = self
+        
+        //Initialize a revealing Splash with with the iconImage, the initial size and the background color
+        let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "hangryLogo")!,iconInitialSize: CGSize(width: 70, height: 70), backgroundColor: UIColor(red:0.11, green:0.56, blue:0.95, alpha:1.0))
+        
+        //Adds the revealing splash view as a sub view
+        self.view.addSubview(revealingSplashView)
+        
+        //Starts animation
+        revealingSplashView.startAnimation(){
+            print("Completed")
+        }
         
     }
     
+
+    
     private func configureNavBar() {
-        navigationItem.title = "Search"
-        navigationItem.titleView = placeView.venueSearchBar
+//        navigationItem.titleView = placeView.venueSearchBar
+        
+        if let navigationBar = self.navigationController?.navigationBar {
+            placeView.venueSearchBar.frame = CGRect(x: 10, y: 0, width: navigationBar.frame.width * 0.8, height: navigationBar.frame.height)
+            placeView.locationSearchBar.frame = CGRect(x: navigationBar.frame.width/2, y: 0, width: navigationBar.frame.width, height: navigationBar.frame.height)
+            
+            navigationBar.addSubview(placeView.venueSearchBar)
+        }
     }
     
 }
@@ -110,7 +133,7 @@ extension LocationViewController: UICollectionViewDelegateFlowLayout {
             bDimension = UIScreen.main.bounds.width
             sDimension = UIScreen.main.bounds.height
         }
-        return CGSize(width: (sDimension - (numOfSpaces * cellSpacing)) / numOfCells, height: bDimension * 0.2)
+        return CGSize(width: (sDimension - (numOfSpaces * cellSpacing)) / numOfCells, height: bDimension * 0.15)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -140,5 +163,27 @@ extension LocationViewController: UICollectionViewDataSource {
 extension LocationViewController: VenueAPIDelegate {
     func getVenues(with places: [Venue]) {
         self.venues = places
+    }
+}
+
+extension LocationViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let annotationIdentifier = "Identifier"
+        var annotationView: MKAnnotationView?
+        if let dequeuedAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier) {
+            annotationView = dequeuedAnnotationView
+            annotationView?.annotation = annotation
+        }
+        else {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
+            annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        }
+        
+        if let annotationView = annotationView {
+            
+            annotationView.canShowCallout = true
+            annotationView.image = UIImage(named: "foodPin")
+        }
+        return annotationView
     }
 }
