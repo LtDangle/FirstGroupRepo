@@ -56,7 +56,7 @@ class LocationView: UIView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.register(BasicCell.self, forCellWithReuseIdentifier: "CollectionCell")
+        cv.register(BasicCVCell.self, forCellWithReuseIdentifier: "CollectionCell")
         // TEST
         cv.backgroundColor = UIColor.clear
         return cv
