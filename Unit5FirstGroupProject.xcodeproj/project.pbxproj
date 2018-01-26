@@ -93,7 +93,7 @@
 		81899B88201651CC008AEA82 /* CollectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsViewController.swift; sourceTree = "<group>"; };
 		81899B8F20169B41008AEA82 /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		81899B9120169B6E008AEA82 /* CollectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsView.swift; sourceTree = "<group>"; };
-		819E66C8201A773B00FF2DF4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "/Users/C4Q/Documents/Group Work/Unit5FirstGroupProject/README.md"; sourceTree = "<absolute>"; };
+		819E66C8201A773B00FF2DF4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "/Users/c4q/Desktop/C4Q Vikash Hart /Assignments/FirstGroupRepo/README.md"; sourceTree = "<absolute>"; };
 		819E66C9201A79D300FF2DF4 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		819E66CB201A89F400FF2DF4 /* VenuesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesAPI.swift; sourceTree = "<group>"; };
 		819E66CD201A8A1300FF2DF4 /* PhotosAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAPI.swift; sourceTree = "<group>"; };
