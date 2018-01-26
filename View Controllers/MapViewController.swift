@@ -15,6 +15,8 @@ class MapViewController: UIViewController {
     let placeView = PlaceView()
     let cellSpacing: CGFloat = 20
     
+    private var venueAPIService = VenueAPI()
+    var venues = [Venue]()
     
     private var places = [Place]() {
         didSet {
@@ -47,6 +49,9 @@ class MapViewController: UIViewController {
         configureNavBar()
         
         let _ = LocationService.manager.checkForLocationServices()
+        
+        venueAPIService.delegate = self
+        
     }
     
     private func configureNavBar() {
@@ -73,6 +78,24 @@ extension MapViewController: UISearchBarDelegate {
             print("spaces not allowed")
             return
         }
+        
+        var nearFlag: Bool
+        var lonlat: String
+        if let hasLocation = placeView.locationSearchBar.text?.isEmpty, hasLocation {
+            nearFlag = true
+        } else if LocationService.manager.checkForLocationServices() == .authorizedAlways || LocationService.manager.checkForLocationServices() == .authorizedWhenInUse {
+            nearFlag = false
+            LocationService.manager
+        } else {
+            true
+        }
+        
+        var nearText = placeView.locationSearchBar.text ?? placeView.locationSearchBar.placeholder ?? "New York, NY".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        
+        
+        
+//        VenueAPI.manager.getVenueData(searchedItem: encodedVenueSearch, locParam: <#T##String#>, location: <#T##CLLocationCoordinate2D?#>, useNearParam: <#T##Bool#>)
+        
     }
 }
 
@@ -114,3 +137,8 @@ extension MapViewController: UICollectionViewDataSource {
     }
 }
 
+extension MapViewController: VenueAPIDelegate {
+    func getVenues(with places: [Venue]) {
+        self.venues = places
+    }
+}

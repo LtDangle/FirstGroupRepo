@@ -37,6 +37,7 @@
 		819E66D4201A915B00FF2DF4 /* NetflixTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E66D3201A915B00FF2DF4 /* NetflixTableViewCell.swift */; };
 		819E66D6201A926600FF2DF4 /* AddCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E66D5201A926600FF2DF4 /* AddCollectionViewController.swift */; };
 		819E66D8201A928C00FF2DF4 /* ManageVenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E66D7201A928C00FF2DF4 /* ManageVenueViewController.swift */; };
+		819E66DA201ABDF100FF2DF4 /* AddVenueToCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E66D9201ABDF100FF2DF4 /* AddVenueToCollectionView.swift */; };
 		81B00EED200E9DB100EC3009 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B00EEC200E9DB100EC3009 /* AppDelegate.swift */; };
 		81B00EF2200E9DB100EC3009 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B00EF0200E9DB100EC3009 /* Main.storyboard */; };
 		81B00EF4200E9DB100EC3009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81B00EF3200E9DB100EC3009 /* Assets.xcassets */; };
@@ -101,6 +102,7 @@
 		819E66D3201A915B00FF2DF4 /* NetflixTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixTableViewCell.swift; sourceTree = "<group>"; };
 		819E66D5201A926600FF2DF4 /* AddCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCollectionViewController.swift; sourceTree = "<group>"; };
 		819E66D7201A928C00FF2DF4 /* ManageVenueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageVenueViewController.swift; sourceTree = "<group>"; };
+		819E66D9201ABDF100FF2DF4 /* AddVenueToCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVenueToCollectionView.swift; sourceTree = "<group>"; };
 		81B00EE9200E9DB100EC3009 /* Unit5FirstGroupProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unit5FirstGroupProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B00EEC200E9DB100EC3009 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81B00EF1200E9DB100EC3009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				813956312019295D0066762A /* ResultsDetailView.swift */,
 				819E66D1201A8FBE00FF2DF4 /* CollectionsTableView.swift */,
 				819E66D3201A915B00FF2DF4 /* NetflixTableViewCell.swift */,
+				819E66D9201ABDF100FF2DF4 /* AddVenueToCollectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -612,6 +615,7 @@
 				81B00EED200E9DB100EC3009 /* AppDelegate.swift in Sources */,
 				819E66D8201A928C00FF2DF4 /* ManageVenueViewController.swift in Sources */,
 				813956182017BD460066762A /* NetworkHelper.swift in Sources */,
+				819E66DA201ABDF100FF2DF4 /* AddVenueToCollectionView.swift in Sources */,
 				819E66D6201A926600FF2DF4 /* AddCollectionViewController.swift in Sources */,
 				8139562A201927FF0066762A /* RestaurantTableViewCell.swift in Sources */,
 				81395630201929330066762A /* ResultsView.swift in Sources */,
