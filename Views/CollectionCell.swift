@@ -16,8 +16,8 @@ class CollectionCell: UICollectionViewCell {
     lazy var imageView: UIImageView = {
         let iv = UIImageView()
         iv.image = #imageLiteral(resourceName: "monkey")
-        
-        iv.
+        iv.layer.cornerRadius = 17
+        iv.layer.masksToBounds = true
         iv.contentMode = .scaleAspectFit
         iv.backgroundColor = .white
         iv.clipsToBounds = true
