@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class CollectionsView: UIView {
     
@@ -15,7 +16,7 @@ class CollectionsView: UIView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.register(CollectionCell.self, forCellWithReuseIdentifier: "CollectionCell")
+        cv.register(BasicCell.self, forCellWithReuseIdentifier: "CollectionCell")
         cv.backgroundColor = .white
         return cv
     }()
@@ -46,10 +47,8 @@ class CollectionsView: UIView {
     
     private func setupCollectionView() {
         addSubview(collectionView)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        [collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-         collectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
-         collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
-         collectionView.trailingAnchor.constraint(equalTo: trailingAnchor)].forEach{$0.isActive = true}
+        collectionView.snp.makeConstraints { (make) in
+            make.edges.equalTo(safeAreaLayoutGuide.snp.edges)
+        }
     }
 }

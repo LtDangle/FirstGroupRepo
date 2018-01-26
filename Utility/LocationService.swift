@@ -19,11 +19,18 @@ class LocationService: NSObject {
     
     static let manager = LocationService()
     
+    
+    private var lat: Int!
+    private var lon: Int!
     private var locationManager: CLLocationManager
 }
 
 // MARK:- Helper Functions
 extension LocationService {
+    
+//    public func locationServicesOn() -> Bool {
+//        return CLLocationManager.locationServicesEnabled() && ( CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse)
+//    }
     
     public func checkForLocationServices() -> CLAuthorizationStatus{
         var status: CLAuthorizationStatus!
@@ -45,6 +52,10 @@ extension LocationService {
             status = .notDetermined
         }
         return status
+    }
+    
+    public func getMostRecentLatLon() -> String {
+        return "\(lat),\(lon)"
     }
     
 }

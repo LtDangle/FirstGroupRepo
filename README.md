@@ -1,4 +1,4 @@
-#  Master-Merge-Conflict
+#  Hangry
 
 ## Overview
 - This app uses MapKit and CoreLocation to build out a Foursquare like app with the following spcecifications:

@@ -26,7 +26,7 @@ class ResultsTableViewCell: UITableViewCell {
     }()
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: "ResultsTVCell")
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         commonInit()
     }
     

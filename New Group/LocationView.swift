@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 
-class PlaceView: UIView {
+class LocationView: UIView {
     
     convenience init() {
         self.init(frame: UIScreen.main.bounds)
@@ -55,7 +55,7 @@ class PlaceView: UIView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.register(CollectionCell.self, forCellWithReuseIdentifier: "CollectionCell")
+        cv.register(BasicCell.self, forCellWithReuseIdentifier: "CollectionCell")
         // TEST
         cv.backgroundColor = UIColor.clear
         return cv
@@ -64,7 +64,7 @@ class PlaceView: UIView {
 
 
 // MARK: - SubViews
-extension PlaceView {
+extension LocationView {
     
     
     private func commonInit() {
@@ -88,34 +88,47 @@ extension PlaceView {
     
     private func setupLocationSB() {
         addSubview(locationSearchBar)
-        locationSearchBar.translatesAutoresizingMaskIntoConstraints = false
-        [locationSearchBar.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-         locationSearchBar.leadingAnchor.constraint(equalTo: leadingAnchor),
-         locationSearchBar.trailingAnchor.constraint(equalTo: trailingAnchor),
-         locationSearchBar.heightAnchor.constraint(equalToConstant: 40)].forEach{$0.isActive = true}
+        locationSearchBar.snp.makeConstraints { (make) in
+//            make.edges.equalTo(safeAreaLayoutGuide.snp.edges)
+            make.top.equalTo(safeAreaLayoutGuide.snp.top)
+            make.leading.equalTo(snp.leading)
+            make.trailing.equalTo(snp.trailing)
+            make.height.equalTo(CGFloat(integerLiteral: 40))
+        }
+//        locationSearchBar.translatesAutoresizingMaskIntoConstraints = false
+//        [locationSearchBar.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+//         locationSearchBar.leadingAnchor.constraint(equalTo: leadingAnchor),
+//         locationSearchBar.trailingAnchor.constraint(equalTo: trailingAnchor),
+//         locationSearchBar.heightAnchor.constraint(equalToConstant: 40)].forEach{$0.isActive = true}
     }
     
     private func setupMapView() {
         addSubview(mapView)
-        mapView.translatesAutoresizingMaskIntoConstraints = false
-        [mapView.topAnchor.constraint(equalTo: locationSearchBar.bottomAnchor),
-         mapView.leadingAnchor.constraint(equalTo: leadingAnchor),
-         mapView.trailingAnchor.constraint(equalTo: trailingAnchor),
-         mapView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)].forEach{$0.isActive = true}
+        mapView.snp.makeConstraints { (make) in
+            make.top.equalTo(locationSearchBar.snp.bottom)
+            make.leading.equalTo(snp.leading)
+            make.trailing.equalTo(snp.trailing)
+            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
+        }
     }
     
     private func setupUserTrackingButton() {
         addSubview(userTrackingButton)
-        userTrackingButton.translatesAutoresizingMaskIntoConstraints = false
-        [userTrackingButton.bottomAnchor.constraint(equalTo: mapView.bottomAnchor),
-         userTrackingButton.trailingAnchor.constraint(equalTo: mapView.trailingAnchor)].forEach{$0.isActive = true}
+        
+        let padding: CGFloat = 20
+        userTrackingButton.snp.makeConstraints { (make) in
+            make.top.equalTo(mapView.snp.top).offset(padding)
+            make.trailing.equalTo(mapView.snp.trailing).offset(-padding)
+        }
     }
     
     private func setupCollectionView() {
         addSubview(collectionView)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        [collectionView.bottomAnchor.constraint(equalTo: mapView.bottomAnchor, constant: -15),
-        collectionView.centerXAnchor.constraint(equalTo: centerXAnchor),
-        collectionView.heightAnchor.constraint(equalTo: mapView.heightAnchor, multiplier: 0.2), collectionView.widthAnchor.constraint(equalTo: mapView.widthAnchor)].forEach { $0.isActive = true }
+        collectionView.snp.makeConstraints { (make) in
+            make.bottom.equalTo(mapView.snp.bottom).offset(-15)
+            make.centerX.equalTo(snp.centerX)
+            make.height.equalTo(mapView.snp.height).multipliedBy(0.2)
+            make.width.equalTo(mapView.snp.width)
+        }
     }
 }
