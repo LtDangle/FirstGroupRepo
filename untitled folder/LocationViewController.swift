@@ -10,9 +10,9 @@ import UIKit
 import MapKit
 
 
-class MapViewController: UIViewController {
+class LocationViewController: UIViewController {
     
-    let placeView = PlaceView()
+    let placeView = LocationView()
     let cellSpacing: CGFloat = 20
     
     private var venueAPIService = VenueAPI()
@@ -61,7 +61,7 @@ class MapViewController: UIViewController {
     
 }
 
-extension MapViewController: UISearchBarDelegate {
+extension LocationViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         guard let text = placeView.venueSearchBar.text else {
@@ -99,7 +99,7 @@ extension MapViewController: UISearchBarDelegate {
     }
 }
 
-extension MapViewController: UICollectionViewDelegateFlowLayout {
+extension LocationViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let numOfCells: CGFloat = 3.25
         let numOfSpaces: CGFloat = 4
@@ -122,14 +122,14 @@ extension MapViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension MapViewController: UICollectionViewDataSource {
+extension LocationViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 20
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! CollectionCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! BasicCell
         
         cell.venueLabel.text = ""
         
@@ -137,7 +137,7 @@ extension MapViewController: UICollectionViewDataSource {
     }
 }
 
-extension MapViewController: VenueAPIDelegate {
+extension LocationViewController: VenueAPIDelegate {
     func getVenues(with places: [Venue]) {
         self.venues = places
     }

@@ -36,7 +36,7 @@ class NetflixTableViewCell: UITableViewCell {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.register(CollectionCell.self, forCellWithReuseIdentifier: "CollectionCell")
+        cv.register(BasicCell.self, forCellWithReuseIdentifier: "CollectionCell")
         cv.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "monkey"))
         return cv
     }()

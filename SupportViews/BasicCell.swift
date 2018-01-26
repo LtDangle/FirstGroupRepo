@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class CollectionCell: UICollectionViewCell {
+class BasicCell: UICollectionViewCell {
     
     static let venueLabelHeight: CGFloat = 50
     
@@ -80,7 +80,7 @@ class CollectionCell: UICollectionViewCell {
             make.centerX.equalTo(snp.centerX)
             make.top.equalTo(imageView.snp.bottom)
             make.width.equalTo(snp.width)
-            make.height.equalTo(CollectionCell.venueLabelHeight)
+            make.height.equalTo(BasicCell.venueLabelHeight)
         }
 //        venueLabel.translatesAutoresizingMaskIntoConstraints = false
 //        [

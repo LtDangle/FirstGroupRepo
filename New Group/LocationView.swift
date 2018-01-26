@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 
-class PlaceView: UIView {
+class LocationView: UIView {
     
     convenience init() {
         self.init(frame: UIScreen.main.bounds)
@@ -55,7 +55,7 @@ class PlaceView: UIView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.register(CollectionCell.self, forCellWithReuseIdentifier: "CollectionCell")
+        cv.register(BasicCell.self, forCellWithReuseIdentifier: "CollectionCell")
         // TEST
         cv.backgroundColor = UIColor.clear
         return cv
@@ -64,7 +64,7 @@ class PlaceView: UIView {
 
 
 // MARK: - SubViews
-extension PlaceView {
+extension LocationView {
     
     
     private func commonInit() {
