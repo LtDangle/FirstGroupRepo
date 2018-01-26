@@ -1,4 +1,5 @@
 #  Hangry
+If you get angry while you're hungry, you need this app in your phone.
 
 ## Overview
 - This app uses MapKit and CoreLocation to build out a Foursquare like app with the following spcecifications:
