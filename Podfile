@@ -8,6 +8,7 @@ target 'Unit5FirstGroupProject' do
   # Pods for Unit5FirstGroupProject
 pod 'Alamofire', '~> 4.6'
 pod 'SnapKit'
+pod 'RevealingSplashView'
 
   target 'Unit5FirstGroupProjectTests' do
     inherit! :search_paths

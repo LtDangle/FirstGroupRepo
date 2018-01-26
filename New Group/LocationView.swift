@@ -28,7 +28,7 @@ class LocationView: UIView {
     
     lazy var venueSearchBar: UISearchBar = {
         let sb = UISearchBar()
-        sb.placeholder = "what are you searching for?"
+        sb.placeholder = "What are you hangry for?"
         sb.tintColor = .white
         return sb
     }()
@@ -36,6 +36,7 @@ class LocationView: UIView {
     lazy var locationSearchBar: UISearchBar = {
         let sb = UISearchBar()
         sb.placeholder = "Queens, NY"
+         sb.barTintColor = UIColor(red: 38/255, green: 194/255, blue: 129/255, alpha: 1.0)
         return sb
     }()
     
@@ -55,7 +56,7 @@ class LocationView: UIView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.register(BasicCell.self, forCellWithReuseIdentifier: "CollectionCell")
+        cv.register(BasicCVCell.self, forCellWithReuseIdentifier: "CollectionCell")
         // TEST
         cv.backgroundColor = UIColor.clear
         return cv
@@ -93,7 +94,7 @@ extension LocationView {
             make.top.equalTo(safeAreaLayoutGuide.snp.top)
             make.leading.equalTo(snp.leading)
             make.trailing.equalTo(snp.trailing)
-            make.height.equalTo(CGFloat(integerLiteral: 40))
+            make.height.equalTo(CGFloat(integerLiteral: 60))
         }
 //        locationSearchBar.translatesAutoresizingMaskIntoConstraints = false
 //        [locationSearchBar.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),

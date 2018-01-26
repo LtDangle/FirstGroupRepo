@@ -39,7 +39,7 @@ class DetailView: UIView {
         let tv = UITableView()
         //Delegates, Datasource to be set up in VC
         tv.backgroundColor = UIColor.blue
-        tv.register(RestaurantTableViewCell.self, forCellReuseIdentifier: "RestaurantTVCell")
+        tv.register(ResultsTableViewCell.self, forCellReuseIdentifier: "RestaurantTVCell")
         return tv
     }()
     
