@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mapVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
         mapVC.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "menu"), style: .plain, target: nil, action: nil)
         let collectionsVC = SavesViewController()
-        collectionsVC.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 1)
+        collectionsVC.tabBarItem = UITabBarItem(title: "Collections", image: #imageLiteral(resourceName: "list"), tag: 1)
         
         let navVC1 = UINavigationController(rootViewController: mapVC)
         let navVC2 = UINavigationController(rootViewController: collectionsVC)
