@@ -75,7 +75,7 @@ extension SavesViewController: UICollectionViewDelegateFlowLayout {
         
         let width = (view.bounds.width - (numberOfSpacesPerVisibleRow * cellSpacing)) / numberOfVisibleCellsPerRow
         
-        let height = width + BasicCVCell.venueLabelHeight
+        let height = width + BasicCell.venueLabelHeight
         
         return CGSize(width: width, height: height)
     }
@@ -101,7 +101,7 @@ extension SavesViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! BasicCVCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! BasicCell
         return cell
     }
 }
@@ -123,7 +123,7 @@ extension SavesViewController: UITableViewDataSource {
 extension SavesViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return ((view.bounds.width - (numberOfSpacesPerVisibleRow * cellSpacing)) / numberOfVisibleCellsPerRow) + BasicCVCell.venueLabelHeight + NetflixTableViewCell.titleLabelHeight + (cellSpacing * 3)
+        return ((view.bounds.width - (numberOfSpacesPerVisibleRow * cellSpacing)) / numberOfVisibleCellsPerRow) + BasicCell.venueLabelHeight + NetflixTableViewCell.titleLabelHeight + (cellSpacing * 3)
     }
     
 }
