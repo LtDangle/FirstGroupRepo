@@ -30,11 +30,11 @@ struct VenueAPI {
         let dateFormatted = dateFormatter.string(from: currentDate)
         
         
-        var parameters: [String: String] = [
+        var parameters: [String: Any] = [
             "client_id": APIKeys.clientId,
             "client_secret": APIKeys.clientSecret,
             "query": "coffee",
-            "limit": "10",
+            "limit": 10,
             "v": dateFormatted]
         
         parameters["query"] = searchedItem
@@ -46,17 +46,20 @@ struct VenueAPI {
         
         
         Alamofire.request(venueURL, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseData { (dataResponse) in
+            print(dataResponse.request?.url)
             if let error = dataResponse.error {
                 print("Data Response Error: \(error.localizedDescription)")
             }
             else if let data = dataResponse.data  {
                 do {
-                    
-                    let decodedFoursquareResult = try JSONDecoder().decode(FoursquareResults.self, from: data)
+//                    dump(data)
+                    let decoder = JSONDecoder()
+                    let decodedFoursquareResult = try decoder.decode(FoursquareResults.self, from: data)
                     let venueSearch = decodedFoursquareResult.response.venues
                     self.delegate?.getVenues(with: venueSearch)
                 }
                 catch {
+//                    dump(data)
                     print("Decoding Error: \(error.localizedDescription)")
                 }
             }

@@ -12,11 +12,15 @@ import RevealingSplashView
 
 class LocationViewController: UIViewController {
     
-    let placeView = LocationView()
+    let locationView = LocationView()
     let cellSpacing: CGFloat = 20
     
     private var venueAPIService = VenueAPI()
-    var venues = [Venue]()
+    var venues = [Venue]() {
+        didSet {
+            locationView.collectionView.reloadData()
+        }
+    }
     
     private var places = [Place]() {
         didSet {
@@ -29,24 +33,27 @@ class LocationViewController: UIViewController {
             }
             // add annotations to mapview - update ui
             DispatchQueue.main.async {
-                self.placeView.mapView.addAnnotations(self.annotations)
-                self.placeView.mapView.showAnnotations(self.annotations, animated: true)
+                self.locationView.mapView.addAnnotations(self.annotations)
+                self.locationView.mapView.showAnnotations(self.annotations, animated: true)
             }
         }
     }
     private var annotations = [MKAnnotation]()
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.addSubview(locationView.venueSearchBar)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        view.addSubview(placeView)
-        placeView.mapView.delegate = self
-        placeView.venueSearchBar.delegate = self
-        placeView.locationSearchBar.delegate = self
-        placeView.collectionView.delegate = self
-        placeView.collectionView.dataSource = self
+        view.addSubview(locationView)
+        locationView.mapView.delegate = self
+        locationView.venueSearchBar.delegate = self
+        locationView.locationSearchBar.delegate = self
+        locationView.collectionView.delegate = self
+        locationView.collectionView.dataSource = self
          self.view.backgroundColor = UIColor(red: 38/255, green: 194/255, blue: 129/255, alpha: 1.0)
         
         configureNavBar()
@@ -75,11 +82,17 @@ class LocationViewController: UIViewController {
 //        navigationItem.titleView = placeView.venueSearchBar
         
         if let navigationBar = self.navigationController?.navigationBar {
-            placeView.venueSearchBar.frame = CGRect(x: 10, y: 0, width: navigationBar.frame.width * 0.8, height: navigationBar.frame.height)
-            placeView.locationSearchBar.frame = CGRect(x: navigationBar.frame.width/2, y: 0, width: navigationBar.frame.width, height: navigationBar.frame.height)
+            locationView.venueSearchBar.frame = CGRect(x: 10, y: 0, width: navigationBar.frame.width * 0.8, height: navigationBar.frame.height)
+            locationView.locationSearchBar.frame = CGRect(x: navigationBar.frame.width/2, y: 0, width: navigationBar.frame.width, height: navigationBar.frame.height)
             
-            navigationBar.addSubview(placeView.venueSearchBar)
+            navigationBar.addSubview(locationView.venueSearchBar)
+            navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "menu"), style: .plain, target: self, action: #selector(showResultsTVC))
         }
+    }
+    
+    @objc private func showResultsTVC() {
+        locationView.venueSearchBar.removeFromSuperview()
+        navigationController?.pushViewController(ResultsTableViewController(), animated: true)
     }
     
 }
@@ -87,7 +100,7 @@ class LocationViewController: UIViewController {
 extension LocationViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-        guard let text = placeView.venueSearchBar.text else {
+        guard let text = locationView.venueSearchBar.text else {
             print("venue search is nil")
             return
         }
@@ -104,25 +117,34 @@ extension LocationViewController: UISearchBarDelegate {
         
         var nearFlag: Bool
         var lonlat: String
-        if let hasLocation = placeView.locationSearchBar.text?.isEmpty, hasLocation {
+        var locParam: String = "Queens, NY"
+        if let hasLocation = locationView.locationSearchBar.text?.isEmpty, hasLocation {
             nearFlag = true
+//            locParam = "Queens, NY"
         } else if LocationService.manager.checkForLocationServices() == .authorizedAlways || LocationService.manager.checkForLocationServices() == .authorizedWhenInUse {
             nearFlag = false
             LocationService.manager
         } else {
-            true
+            nearFlag = true
         }
         
-        var nearText = placeView.locationSearchBar.text ?? placeView.locationSearchBar.placeholder ?? "New York, NY".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        var nearText = locationView.locationSearchBar.text ?? locationView.locationSearchBar.placeholder ?? "Queens, NY".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         
         
-        
-//        VenueAPI.manager.getVenueData(searchedItem: encodedVenueSearch, locParam: <#T##String#>, location: <#T##CLLocationCoordinate2D?#>, useNearParam: <#T##Bool#>)
+        if !encodedVenueSearch.isEmpty {
+            venueAPIService.getVenueData(searchedItem: encodedVenueSearch, locParam: locParam, location: nil, useNearParam: true)
+        }
         
     }
 }
 
 extension LocationViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        locationView.venueSearchBar.removeFromSuperview()
+        navigationController?.pushViewController(DetailViewController(), animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let numOfCells: CGFloat = 3.25
         let numOfSpaces: CGFloat = 4
@@ -148,14 +170,21 @@ extension LocationViewController: UICollectionViewDelegateFlowLayout {
 extension LocationViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        // TEST
+        if venues.isEmpty {
+            return 20
+        }
+        return venues.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! BasicCell
+        var venue: Venue
         
-        cell.venueLabel.text = ""
-        
+        if !venues.isEmpty {
+            venue = venues[indexPath.row]
+            cell.venueLabel.text = venue.name
+        }
         return cell
     }
 }

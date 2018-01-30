@@ -13,19 +13,20 @@ class ResultsTableViewCell: UITableViewCell {
     
     lazy var resultsImageView: UIImageView = {
         let iv = UIImageView()
-        iv.backgroundColor = .black
+        iv.backgroundColor = .white
         return iv
     }()
     
     lazy var resultsLabel: UILabel = {
         let lab = UILabel()
         //We can string interpolate the tags, name whatever here or I can separate it into two labels
+        lab.backgroundColor = UIColor(red: 38/255, green: 194/255, blue: 129/255, alpha: 1.0)
         lab.text  = """
-        KFC
+        Another PlaceHolder
         Fried Food, Fast Food
         """
         lab.textAlignment = .center
-        lab.backgroundColor = UIColor.green
+  
         lab.textColor = .white
         return lab
     }()

@@ -40,6 +40,7 @@
 		81B00F0D200E9DB100EC3009 /* Unit5FirstGroupProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B00F0C200E9DB100EC3009 /* Unit5FirstGroupProjectUITests.swift */; };
 		81B00F1B200EA20000EC3009 /* test in Resources */ = {isa = PBXBuildFile; fileRef = 81B00F1A200EA20000EC3009 /* test */; };
 		81EB841A201B8AC8007F517A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 81EB8419201B8AC8007F517A /* README.md */; };
+		81EF4276201BAE3B00CBC63C /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EF4275201BAE3B00CBC63C /* ResultsTableViewCell.swift */; };
 		86B12A8BDC03A084D7300BBB /* Pods_Unit5FirstGroupProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B43D78D8D5A5E8A5A78E7C /* Pods_Unit5FirstGroupProjectUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +106,7 @@
 		81B00F0E200E9DB100EC3009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81B00F1A200EA20000EC3009 /* test */ = {isa = PBXFileReference; lastKnownFileType = text; path = test; sourceTree = "<group>"; };
 		81EB8419201B8AC8007F517A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		81EF4275201BAE3B00CBC63C /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
 		C28B2B6C5B8093DF6AA40364 /* Pods-Unit5FirstGroupProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unit5FirstGroupProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Unit5FirstGroupProjectTests/Pods-Unit5FirstGroupProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D43AA51FDBAA3D2C499F9735 /* Pods-Unit5FirstGroupProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unit5FirstGroupProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Unit5FirstGroupProjectUITests/Pods-Unit5FirstGroupProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -211,6 +213,7 @@
 		81A3DF2B201B8BBA00580D4F /* SupportViews */ = {
 			isa = PBXGroup;
 			children = (
+				81EF4275201BAE3B00CBC63C /* ResultsTableViewCell.swift */,
 				81A3DF2E201B8C1400580D4F /* BasicCell.swift */,
 				81A3DF2C201B8C1400580D4F /* InfoScrollView.swift */,
 				81A3DF2D201B8C1400580D4F /* NetflixTableViewCell.swift */,
@@ -610,6 +613,7 @@
 				81B00EED200E9DB100EC3009 /* AppDelegate.swift in Sources */,
 				813956182017BD460066762A /* NetworkHelper.swift in Sources */,
 				819E66DA201ABDF100FF2DF4 /* AddVenueToCollectionView.swift in Sources */,
+				81EF4276201BAE3B00CBC63C /* ResultsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

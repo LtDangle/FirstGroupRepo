@@ -15,7 +15,7 @@ class BasicCell: UICollectionViewCell {
     
     lazy var imageView: UIImageView = {
         let iv = UIImageView()
-        iv.image = #imageLiteral(resourceName: "monkey")
+        iv.image = #imageLiteral(resourceName: "hangryLogo")
         iv.layer.cornerRadius = 17
         iv.layer.masksToBounds = true
         iv.contentMode = .scaleAspectFit

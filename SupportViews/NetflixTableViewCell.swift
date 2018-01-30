@@ -36,8 +36,9 @@ class NetflixTableViewCell: UITableViewCell {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.backgroundColor = .white
         cv.register(BasicCell.self, forCellWithReuseIdentifier: "CollectionCell")
-        cv.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "monkey"))
+//        cv.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "monkey"))
         return cv
     }()
     
@@ -46,7 +47,7 @@ class NetflixTableViewCell: UITableViewCell {
         label.textAlignment = .left
         label.text = "collection name here"
         label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
-        label.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "monkey"))
+//        label.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "monkey"))
         return label
     }()
     

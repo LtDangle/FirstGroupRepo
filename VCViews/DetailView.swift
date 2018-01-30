@@ -31,21 +31,24 @@ class DetailView: UIView {
     
     lazy var restaurantImageView: UIImageView = {
         let iv = UIImageView()
-        iv.image = #imageLiteral(resourceName: "chicken")
+        iv.image = #imageLiteral(resourceName: "hangryLogo")
         return iv
     }()
     
     lazy var restaurantTableView: UITableView = {
         let tv = UITableView()
         //Delegates, Datasource to be set up in VC
-        tv.backgroundColor = UIColor.blue
+
         tv.register(ResultsTableViewCell.self, forCellReuseIdentifier: "RestaurantTVCell")
+        
         return tv
     }()
     
     lazy var addToCollection: UIButton = {
         let button = UIButton()
         button.setImage(#imageLiteral(resourceName: "add"), for: .normal)
+    
+
         return button
     }()
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class DetailViewController: UIViewController {
 
@@ -14,7 +15,10 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.addSubview(detailView)
+        detailView.snp.makeConstraints { (make) in
+            make.edges.equalTo(view.safeAreaLayoutGuide.snp.edges)
+        }
         // Do any additional setup after loading the view.
     }
 
