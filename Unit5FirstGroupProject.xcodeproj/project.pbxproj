@@ -20,17 +20,11 @@
 		813956202017C03B0066762A /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8139561F2017C03B0066762A /* LocationService.swift */; };
 		813956222017D3B40066762A /* PermanentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813956212017D3B40066762A /* PermanentStorage.swift */; };
 		813956262017E0DD0066762A /* TempStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813956252017E0DD0066762A /* TempStorage.swift */; };
-		81395628201927CE0066762A /* RestaurantCollectionCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81395627201927CE0066762A /* RestaurantCollectionCVCell.swift */; };
-		8139562A201927FF0066762A /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81395629201927FF0066762A /* RestaurantTableViewCell.swift */; };
-		8139562C201928CB0066762A /* AddCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8139562B201928CB0066762A /* AddCollectionView.swift */; };
-		8139562E201929110066762A /* RestaurantCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8139562D201929110066762A /* RestaurantCollectionView.swift */; };
 		8139563620193CB70066762A /* FourSquareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8139563520193CB70066762A /* FourSquareModel.swift */; };
 		8139563820193CDF0066762A /* FourSquareImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8139563720193CDF0066762A /* FourSquareImageModel.swift */; };
-		81899B9220169B6E008AEA82 /* CollectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81899B9120169B6E008AEA82 /* CollectionsView.swift */; };
 		819E66CC201A89F400FF2DF4 /* VenuesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E66CB201A89F400FF2DF4 /* VenuesAPI.swift */; };
 		819E66CE201A8A1300FF2DF4 /* PhotosAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E66CD201A8A1300FF2DF4 /* PhotosAPI.swift */; };
 		819E66D0201A8A4300FF2DF4 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E66CF201A8A4300FF2DF4 /* APIKeys.swift */; };
-		819E66D2201A8FBE00FF2DF4 /* CollectionsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E66D1201A8FBE00FF2DF4 /* CollectionsTableView.swift */; };
 		819E66DA201ABDF100FF2DF4 /* AddVenueToCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819E66D9201ABDF100FF2DF4 /* AddVenueToCollectionView.swift */; };
 		81A3DF26201B8AFF00580D4F /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A3DF25201B8AFF00580D4F /* DetailView.swift */; };
 		81A3DF28201B8B0200580D4F /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A3DF27201B8B0200580D4F /* LocationView.swift */; };
@@ -38,7 +32,6 @@
 		81A3DF30201B8C1400580D4F /* InfoScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A3DF2C201B8C1400580D4F /* InfoScrollView.swift */; };
 		81A3DF31201B8C1400580D4F /* NetflixTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A3DF2D201B8C1400580D4F /* NetflixTableViewCell.swift */; };
 		81A3DF32201B8C1400580D4F /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A3DF2E201B8C1400580D4F /* BasicCell.swift */; };
-		81A3DF33201B8C1400580D4F /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A3DF2F201B8C1400580D4F /* ResultsTableViewCell.swift */; };
 		81B00EED200E9DB100EC3009 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B00EEC200E9DB100EC3009 /* AppDelegate.swift */; };
 		81B00EF2200E9DB100EC3009 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B00EF0200E9DB100EC3009 /* Main.storyboard */; };
 		81B00EF4200E9DB100EC3009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81B00EF3200E9DB100EC3009 /* Assets.xcassets */; };
@@ -47,6 +40,7 @@
 		81B00F0D200E9DB100EC3009 /* Unit5FirstGroupProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B00F0C200E9DB100EC3009 /* Unit5FirstGroupProjectUITests.swift */; };
 		81B00F1B200EA20000EC3009 /* test in Resources */ = {isa = PBXBuildFile; fileRef = 81B00F1A200EA20000EC3009 /* test */; };
 		81EB841A201B8AC8007F517A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 81EB8419201B8AC8007F517A /* README.md */; };
+		81EF4276201BAE3B00CBC63C /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EF4275201BAE3B00CBC63C /* ResultsTableViewCell.swift */; };
 		86B12A8BDC03A084D7300BBB /* Pods_Unit5FirstGroupProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B43D78D8D5A5E8A5A78E7C /* Pods_Unit5FirstGroupProjectUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,17 +80,11 @@
 		8139561F2017C03B0066762A /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		813956212017D3B40066762A /* PermanentStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermanentStorage.swift; sourceTree = "<group>"; };
 		813956252017E0DD0066762A /* TempStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempStorage.swift; sourceTree = "<group>"; };
-		81395627201927CE0066762A /* RestaurantCollectionCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCollectionCVCell.swift; sourceTree = "<group>"; };
-		81395629201927FF0066762A /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
-		8139562B201928CB0066762A /* AddCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCollectionView.swift; sourceTree = "<group>"; };
-		8139562D201929110066762A /* RestaurantCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCollectionView.swift; sourceTree = "<group>"; };
 		8139563520193CB70066762A /* FourSquareModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareModel.swift; sourceTree = "<group>"; };
 		8139563720193CDF0066762A /* FourSquareImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareImageModel.swift; sourceTree = "<group>"; };
-		81899B9120169B6E008AEA82 /* CollectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsView.swift; sourceTree = "<group>"; };
 		819E66CB201A89F400FF2DF4 /* VenuesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesAPI.swift; sourceTree = "<group>"; };
 		819E66CD201A8A1300FF2DF4 /* PhotosAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAPI.swift; sourceTree = "<group>"; };
 		819E66CF201A8A4300FF2DF4 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
-		819E66D1201A8FBE00FF2DF4 /* CollectionsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsTableView.swift; sourceTree = "<group>"; };
 		819E66D9201ABDF100FF2DF4 /* AddVenueToCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVenueToCollectionView.swift; sourceTree = "<group>"; };
 		81A3DF25201B8AFF00580D4F /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailView.swift; path = VCViews/DetailView.swift; sourceTree = SOURCE_ROOT; };
 		81A3DF27201B8B0200580D4F /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
@@ -104,7 +92,6 @@
 		81A3DF2C201B8C1400580D4F /* InfoScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoScrollView.swift; path = SupportViews/InfoScrollView.swift; sourceTree = SOURCE_ROOT; };
 		81A3DF2D201B8C1400580D4F /* NetflixTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetflixTableViewCell.swift; path = SupportViews/NetflixTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		81A3DF2E201B8C1400580D4F /* BasicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasicCell.swift; path = SupportViews/BasicCell.swift; sourceTree = SOURCE_ROOT; };
-		81A3DF2F201B8C1400580D4F /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultsTableViewCell.swift; path = SupportViews/ResultsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		81B00EE9200E9DB100EC3009 /* Unit5FirstGroupProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unit5FirstGroupProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B00EEC200E9DB100EC3009 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81B00EF1200E9DB100EC3009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -119,6 +106,7 @@
 		81B00F0E200E9DB100EC3009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81B00F1A200EA20000EC3009 /* test */ = {isa = PBXFileReference; lastKnownFileType = text; path = test; sourceTree = "<group>"; };
 		81EB8419201B8AC8007F517A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		81EF4275201BAE3B00CBC63C /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
 		C28B2B6C5B8093DF6AA40364 /* Pods-Unit5FirstGroupProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unit5FirstGroupProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Unit5FirstGroupProjectTests/Pods-Unit5FirstGroupProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D43AA51FDBAA3D2C499F9735 /* Pods-Unit5FirstGroupProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unit5FirstGroupProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Unit5FirstGroupProjectUITests/Pods-Unit5FirstGroupProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,19 +180,6 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
-		81899B8C20165D29008AEA82 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				81899B9120169B6E008AEA82 /* CollectionsView.swift */,
-				81395627201927CE0066762A /* RestaurantCollectionCVCell.swift */,
-				81395629201927FF0066762A /* RestaurantTableViewCell.swift */,
-				8139562B201928CB0066762A /* AddCollectionView.swift */,
-				8139562D201929110066762A /* RestaurantCollectionView.swift */,
-				819E66D1201A8FBE00FF2DF4 /* CollectionsTableView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		81899B8D20165D32008AEA82 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,13 +213,12 @@
 		81A3DF2B201B8BBA00580D4F /* SupportViews */ = {
 			isa = PBXGroup;
 			children = (
+				81EF4275201BAE3B00CBC63C /* ResultsTableViewCell.swift */,
 				81A3DF2E201B8C1400580D4F /* BasicCell.swift */,
 				81A3DF2C201B8C1400580D4F /* InfoScrollView.swift */,
 				81A3DF2D201B8C1400580D4F /* NetflixTableViewCell.swift */,
-				81A3DF2F201B8C1400580D4F /* ResultsTableViewCell.swift */,
 			);
-			name = SupportViews;
-			path = SupportFiles;
+			path = SupportViews;
 			sourceTree = "<group>";
 		};
 		81B00EE0200E9DB100EC3009 = {
@@ -253,7 +227,6 @@
 				81EB8419201B8AC8007F517A /* README.md */,
 				81899B8D20165D32008AEA82 /* Supporting Files */,
 				81899B8E2016890B008AEA82 /* Models */,
-				81899B8C20165D29008AEA82 /* Views */,
 				810C7C6E201B873F001EB825 /* ViewControllers */,
 				81A3DF24201B8AF200580D4F /* VCViews */,
 				81A3DF2B201B8BBA00580D4F /* SupportViews */,
@@ -466,11 +439,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Unit5FirstGroupProject/Pods-Unit5FirstGroupProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -621,30 +596,24 @@
 				813956202017C03B0066762A /* LocationService.swift in Sources */,
 				813956262017E0DD0066762A /* TempStorage.swift in Sources */,
 				810C7C72201B8790001EB825 /* ResultsTableViewController.swift in Sources */,
-				819E66D2201A8FBE00FF2DF4 /* CollectionsTableView.swift in Sources */,
 				810C7C7A201B87FC001EB825 /* SavesViewController.swift in Sources */,
-				81899B9220169B6E008AEA82 /* CollectionsView.swift in Sources */,
 				81A3DF30201B8C1400580D4F /* InfoScrollView.swift in Sources */,
 				8139561C2017BF7F0066762A /* Place.swift in Sources */,
 				810C7C78201B87E3001EB825 /* AddVenueToCollectionViewController.swift in Sources */,
-				81395628201927CE0066762A /* RestaurantCollectionCVCell.swift in Sources */,
 				81A3DF2A201B8B0600580D4F /* ResultsView.swift in Sources */,
 				81A3DF31201B8C1400580D4F /* NetflixTableViewCell.swift in Sources */,
-				81A3DF33201B8C1400580D4F /* ResultsTableViewCell.swift in Sources */,
 				81A3DF26201B8AFF00580D4F /* DetailView.swift in Sources */,
 				8139563820193CDF0066762A /* FourSquareImageModel.swift in Sources */,
 				813956222017D3B40066762A /* PermanentStorage.swift in Sources */,
 				819E66CC201A89F400FF2DF4 /* VenuesAPI.swift in Sources */,
-				8139562E201929110066762A /* RestaurantCollectionView.swift in Sources */,
 				810C7C76201B8799001EB825 /* LocationViewController.swift in Sources */,
 				8139561A2017BD6C0066762A /* ImageAPIClient.swift in Sources */,
-				8139562C201928CB0066762A /* AddCollectionView.swift in Sources */,
 				81A3DF32201B8C1400580D4F /* BasicCell.swift in Sources */,
 				8139563620193CB70066762A /* FourSquareModel.swift in Sources */,
 				81B00EED200E9DB100EC3009 /* AppDelegate.swift in Sources */,
 				813956182017BD460066762A /* NetworkHelper.swift in Sources */,
 				819E66DA201ABDF100FF2DF4 /* AddVenueToCollectionView.swift in Sources */,
-				8139562A201927FF0066762A /* RestaurantTableViewCell.swift in Sources */,
+				81EF4276201BAE3B00CBC63C /* ResultsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -813,6 +782,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Unit5FirstGroupProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DiegoBaca.Unit5FirstGroupProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -828,6 +798,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Unit5FirstGroupProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DiegoBaca.Unit5FirstGroupProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";

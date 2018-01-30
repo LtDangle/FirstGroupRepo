@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ResultsView: UIView {
     
@@ -35,7 +36,9 @@ class ResultsView: UIView {
     
     private func setupViews() {
         addSubview(resultsTableView)
-        resultsTableView.translatesAutoresizingMaskIntoConstraints = false
+        resultsTableView.snp.makeConstraints { (make) in
+            make.edges.equalTo(snp.edges)
+        }
         //constraints for tableView can be set up in VC
     }
     

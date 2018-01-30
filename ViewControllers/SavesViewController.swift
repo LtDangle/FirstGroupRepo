@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SnapKit
 
 class SavesViewController: UIViewController {
     
@@ -27,16 +26,11 @@ class SavesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(collectionsTableView)
-        collectionsTableView.backgroundColor = .white
         configureNavBar()
         
         collectionsTableView.register(NetflixTableViewCell.self, forCellReuseIdentifier: "NetflixCell")
         collectionsTableView.delegate = self
         collectionsTableView.dataSource = self
-        
-        collectionsTableView.snp.makeConstraints { (make) in
-            make.edges.equalTo(view.safeAreaLayoutGuide.snp.edges)
-        }
         
         
     }
@@ -76,10 +70,6 @@ class SavesViewController: UIViewController {
 }
 
 extension SavesViewController: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        navigationController?.pushViewController(DetailViewController(), animated: true)
-    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         

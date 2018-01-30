@@ -20,15 +20,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // TODO:- customize tabbar buttons
         let mapVC = LocationViewController()
         mapVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
-        mapVC.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "menu"), style: .plain, target: nil, action: nil)
+//        mapVC.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "menu"), style: .plain, target: nil, action: nil)
         let collectionsVC = SavesViewController()
-        collectionsVC.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 1)
+        collectionsVC.tabBarItem = UITabBarItem(title: "Collections", image: #imageLiteral(resourceName: "list"), tag: 1)
         
         let navVC1 = UINavigationController(rootViewController: mapVC)
         let navVC2 = UINavigationController(rootViewController: collectionsVC)
+        let nacVC = [navVC1, navVC2]
+        nacVC.forEach { ($0).navigationBar.barTintColor = UIColor(red: 38/255, green: 194/255, blue: 129/255, alpha: 1.0); ($0).navigationBar.tintColor = UIColor(red: 38/255, green: 103/255, blue: 194/255, alpha: 1.0); ($0).navigationBar.backgroundColor = UIColor(red: 38/255, green: 194/255, blue: 129/255, alpha: 1.0) }
+
         
         let tabbarVC = UITabBarController()
         tabbarVC.viewControllers = [navVC1, navVC2]
+        tabbarVC.tabBar.barTintColor = UIColor(red: 38/255, green: 194/255, blue: 129/255, alpha: 1.0)
+        tabbarVC.tabBar.tintColor = UIColor(red: 38/255, green: 103/255, blue: 194/255, alpha: 1.0)
+
         
         
         window = UIWindow(frame: UIScreen.main.bounds)
